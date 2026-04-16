@@ -882,10 +882,10 @@ def calc_key_levels(candles_1h, candles_4h, price, ob):
             t = "压力" if p > price else "支撑"
             levels.append({"price": p, "type": t, "source": "整数关口${:,.0f}".format(p)})
 
-    if ob.get("ask_wall_price") and ob.get("ask_wall_size", 0) > 10:
+    if ob and ob.get("ask_wall_price") and ob.get("ask_wall_size", 0) > 10:
         levels.append({"price": ob["ask_wall_price"], "type": "压力",
                        "source": "卖单墙({:.0f}BTC)".format(ob["ask_wall_size"])})
-    if ob.get("bid_wall_price") and ob.get("bid_wall_size", 0) > 10:
+    if ob and ob.get("bid_wall_price") and ob.get("bid_wall_size", 0) > 10:
         levels.append({"price": ob["bid_wall_price"], "type": "支撑",
                        "source": "买单墙({:.0f}BTC)".format(ob["bid_wall_size"])})
 
@@ -1533,7 +1533,7 @@ def alert_thread():
                     msg += "1分钟变动: {:+.0f}点\n".format(change)
                     msg += "当前价: ${:,.0f}\n".format(price)
                     msg += "注意风险，留意关键位反应！"
-                    send_telegram(msg)
+                    log("TG已关闭: " + str(msg))
                     log("急跌/急涨预警已推送")
 
             # 关键位预警
@@ -1570,8 +1570,8 @@ def alert_thread():
                         if la.get("tp_hint"):
                             msg += "目标位: ${:,.0f}\n".format(la["tp_hint"])
                         msg += "─────────────────────"
-                        send_telegram(msg)
-                        log("关键位行为预警: {} ${:,.0f}".format(la["action"], price))
+                        log("TG已关闭: " + str(msg))
+                        log("关键位行为预警(已关闭): {} ${:,.0f}".format(la["action"], price))
 
                 for lv in levels:
                     if (lv["distance"] <= KEY_LEVEL_PROXIMITY and
@@ -1597,7 +1597,7 @@ def alert_thread():
                             price, lv["type"], lv["price"], lv["confluence"],
                             "、".join(lv["sources"][:2]),
                             rsi_1h, macd_1h,
-                            ob.get("bias", "N/A"),
+                            ob.get("bias", "N/A") if ob else "N/A",
                             "做空" if lv["type"] == "压力" else "做多"
                         )
 
@@ -1617,8 +1617,8 @@ def alert_thread():
                                 msg += "龙虾判断: {}\n".format(quick_result.strip())
                                 msg += "─────────────────────\n"
                                 msg += "<i>30分钟内不再重复</i>"
-                                send_telegram(msg)
-                                log("关键位预警已推送: ${}".format(lv["price"]))
+                                log("TG已关闭: " + str(msg))
+                                log("关键位预警已跳过(已关闭): ${}".format(lv["price"]))
                             else:
                                 log("关键位${} 龙虾判断不值得，跳过推送".format(int(lv["price"])))
                         except Exception as e:
@@ -1631,7 +1631,7 @@ def alert_thread():
                     bias = "多头过热" if funding > 0 else "空头过热"
                     msg = "<b>资金费率异常</b>\n费率: {:.4%}\n状态: {}\n当前价: ${:,.0f}".format(
                         funding, bias, price)
-                    send_telegram(msg)
+                    log("TG已关闭: " + str(msg))
 
             # OI突变 + 背离预警
             oi = get_open_interest()
@@ -1653,7 +1653,7 @@ def alert_thread():
                             msg += "⚠️ <b>三重确认</b>: OI背离+资金费率正值，空头信号极强！\n"
                         elif oi_signal == "bullish" and funding < 0:
                             msg += "⚠️ <b>三重确认</b>: OI背离+资金费率负值，多头信号极强！\n"
-                    send_telegram(msg)
+                    log("TG已关闭: " + str(msg))
 
             if oi and prev_oi:
                 oi_change = (oi - prev_oi) / prev_oi * 100
@@ -1661,7 +1661,7 @@ def alert_thread():
                     d = "增加" if oi_change > 0 else "减少"
                     msg = "<b>持仓量突变</b>\n持仓{}: {:+.1f}%\n当前价: ${:,.0f}".format(
                         d, oi_change, price)
-                    send_telegram(msg)
+                    log("TG已关闭: " + str(msg))
             if oi:
                 save_oi_cache(oi)
 

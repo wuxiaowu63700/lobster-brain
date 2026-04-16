@@ -1,0 +1,68 @@
+{
+  "signals": [
+    {
+      "direction": "做空",
+      "strength": "强",
+      "time": "03-22 15:09",
+      "price_at_signal": 69162.1,
+      "entry_low": 69062.1,
+      "entry_high": 69362.1,
+      "stop_loss": 69759.1,
+      "target": 68162.1,
+      "stop_loss_points": 597,
+      "result": "止盈",
+      "pnl_points": 1000,
+      "closed_time": "03-23 05:05",
+      "closed_price": 67979.7,
+      "close_type": "自动"
+    }
+  ],
+  "active_signal": null,
+  "reflections": [
+    {
+      "time": "03-21 23:58",
+      "signal": "做空 手动止损 -16点",
+      "content": "**"
+    },
+    {
+      "time": "03-22 01:31",
+      "signal": "做多 手动止损 -275点",
+      "content": "**"
+    },
+    {
+      "time": "03-22 09:09",
+      "signal": "做多 止损 -500点",
+      "content": "无"
+    },
+    {
+      "time": "03-23 05:05",
+      "signal": "做空 止盈 +1000点",
+      "content": "无"
+    }
+  ],
+  "stats": {
+    "total": 3,
+    "wins": 3,
+    "losses": 0,
+    "manual_closes": 3,
+    "total_pnl_points": 0,
+    "total_pnl_usdt": 197
+  },
+  "real_trade": null,
+  "bot_stats": {
+    "total": 3,
+    "wins": 2,
+    "losses": 1,
+    "total_pnl_points": 137,
+    "capital": 3300,
+    "total_pnl_usdt": 34.89999999999999
+  },
+  "bot_trade": null,
+  "real_trades": [],
+  "goal": {
+    "ultimate": "10次翻倍",
+    "current_round": 1,
+    "round_target": 6600,
+    "description": "每轮从3300翻倍到6600，完成10次即为终极目标"
+  }
+}

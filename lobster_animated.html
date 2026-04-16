@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>龙虾资本 · 动态办公室</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --floor: #e8d5b0;
+  --wall: #c4a882;
+  --wall-dark: #a08060;
+  --desk-trader: #8b5e3c;
+  --desk-research: #5c3d8b;
+  --screen-glow-trader: rgba(0,255,136,0.4);
+  --screen-glow-research: rgba(180,100,255,0.4);
+  --pixel: 'Press Start 2P', monospace;
+  --mono: 'DM Mono', monospace;
+  --sans: 'DM Sans', sans-serif;
+  --text: #2a1a08;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; image-rendering: pixelated; }
+
+body {
+  background: #1a0f00;
+  font-family: var(--sans);
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── 顶部HUD ── */
+.hud {
+  background: #0d0d0d;
+  border-bottom: 2px solid #333;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.hud-logo {
+  font-family: var(--pixel);
+  font-size: 9px;
+  color: #ff6b35;
+  text-shadow: 2px 2px 0 #8b2500;
+  letter-spacing: 1px;
+}
+
+.hud-price {
+  font-family: var(--mono);
+  font-size: 18px;
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255,215,0,0.5);
+}
+
+.hud-chg { font-family: var(--mono); font-size: 12px; margin-left: 4px; }
+.hud-chg.up { color: #00ff88; }
+.hud-chg.dn { color: #ff4466; }
+
+.hud-stats {
+  display: flex;
+  gap: 16px;
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #888;
+}
+
+.hud-stat-val { color: #ccc; margin-left: 4px; }
+.hud-stat-val.up { color: #00ff88; }
+.hud-stat-val.dn { color: #ff4466; }
+.hud-stat-val.gold { color: #ffd700; }
+
+.hud-time { font-family: var(--mono); font-size: 12px; color: #555; }
+
+/* ── 办公室场景 ── */
+.office-scene {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+canvas#office {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── 说话气泡（HTML overlay）── */
+.speech-bubble {
+  position: absolute;
+  background: white;
+  border: 3px solid #333;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: var(--pixel);
+  font-size: 7px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  max-width: 200px;
+  word-break: break-all;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 50;
+  box-shadow: 3px 3px 0 #333;
+}
+
+.speech-bubble.show { opacity: 1; }
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 20px;
+  border: 6px solid transparent;
+  border-top-color: #333;
+}
+
+.speech-bubble.right::after {
+  left: auto;
+  right: 20px;
+}
+
+/* 绿色（交易员气泡） */
+.speech-bubble.trader {
+  background: #e8ffe8;
+  border-color: #00aa44;
+  box-shadow: 3px 3px 0 #006622;
+}
+.speech-bubble.trader::after { border-top-color: #00aa44; }
+
+/* 紫色（研究员气泡） */
+.speech-bubble.researcher {
+  background: #f0e8ff;
+  border-color: #7c3aed;
+  box-shadow: 3px 3px 0 #4a1d8a;
+}
+.speech-bubble.researcher::after { border-top-color: #7c3aed; }
+
+/* ── 底部数据栏 ── */
+.data-bar {
+  background: #0d0d0d;
+  border-top: 2px solid #333;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.data-panel {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.data-panel.trader { border-left: 3px solid #00ff88; }
+.data-panel.researcher { border-left: 3px solid #b464ff; }
+
+.dp-name {
+  font-family: var(--pixel);
+  font-size: 7px;
+  color: #888;
+  letter-spacing: 1px;
+  width: 60px;
+  flex-shrink: 0;
+}
+.data-panel.trader .dp-name { color: #00ff88; }
+.data-panel.researcher .dp-name { color: #b464ff; }
+
+.dp-items {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #666;
+}
+
+.dp-item-val { color: #ccc; margin-left: 3px; }
+.dp-item-val.long { color: #00ff88; }
+.dp-item-val.short { color: #ff4466; }
+.dp-item-val.gold { color: #ffd700; }
+.dp-item-val.purple { color: #b464ff; }
+</style>
+</head>
+<body>
+
+<!-- HUD -->
+<div class="hud">
+  <div class="hud-logo">🦞 LOBSTER CAPITAL</div>
+  <div>
+    <span style="font-family:var(--mono);font-size:11px;color:#555">BTC/USDT</span>
+    <span class="hud-price" id="h-price">$--</span>
+    <span class="hud-chg" id="h-chg"></span>
+  </div>
+  <div class="hud-stats">
+    <span>资金<span class="hud-stat-val gold" id="h-capital">$--</span></span>
+    <span>目标<span class="hud-stat-val" id="h-target">$--</span></span>
+    <span>胜率<span class="hud-stat-val" id="h-wr">--%</span></span>
+    <span>研判<span class="hud-stat-val purple" id="h-research">--</span></span>
+  </div>
+  <div class="hud-time" id="h-time">--:--:--</div>
+</div>
+
+<!-- 办公室动画场景 -->
+<div class="office-scene">
+  <canvas id="office"></canvas>
+
+  <!-- 说话气泡 -->
+  <div class="speech-bubble trader" id="bubble-trader"></div>
+  <div class="speech-bubble researcher right" id="bubble-researcher"></div>
+</div>
+
+<!-- 底部数据栏 -->
+<div class="data-bar">
+  <div class="data-panel trader">
+    <div class="dp-name">🦞 交易员</div>
+    <div class="dp-items">
+      <span>持仓<span class="dp-item-val" id="d-dir">空仓</span></span>
+      <span>浮盈<span class="dp-item-val" id="d-pnl">--</span></span>
+      <span>入场<span class="dp-item-val" id="d-entry">--</span></span>
+      <span>战绩<span class="dp-item-val" id="d-wl">--</span></span>
+    </div>
+  </div>
+  <div class="data-panel researcher">
+    <div class="dp-name">🔬 研究员</div>
+    <div class="dp-items">
+      <span>结论<span class="dp-item-val purple" id="d-conclusion">--</span></span>
+      <span>置信<span class="dp-item-val" id="d-confidence">--</span></span>
+      <span>恐贪<span class="dp-item-val gold" id="d-fg">--</span></span>
+      <span>逻辑<span class="dp-item-val" id="d-logic" style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">--</span></span>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════
+// 画布设置
+// ══════════════════════════════════════════════════════
+const canvas = document.getElementById('office');
+const ctx = canvas.getContext('2d');
+
+function resize() {
+  const scene = canvas.parentElement;
+  canvas.width  = scene.clientWidth;
+  canvas.height = scene.clientHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// ══════════════════════════════════════════════════════
+// 场景常量
+// ══════════════════════════════════════════════════════
+const SCALE = 3; // 像素缩放倍数
+
+// 龙虾角色状态
+const STATE = {
+  IDLE: 'idle',
+  TYPING: 'typing',
+  THINKING: 'thinking',
+  EXCITED: 'excited',
+  SAD: 'sad',
+  WALKING: 'walking',
+  TALKING: 'talking'
+};
+
+// ══════════════════════════════════════════════════════
+// 龙虾绘制函数（像素风）
+// ══════════════════════════════════════════════════════
+function drawLobster(x, y, scale, color, state, frame, facing='right') {
+  const s = scale * SCALE;
+  ctx.save();
+  ctx.translate(x, y);
+  if (facing === 'left') {
+    ctx.scale(-1, 1);
+  }
+
+  // 身体
+  ctx.fillStyle = color;
+  ctx.fillRect(-3*s, -8*s, 6*s, 6*s);
+
+  // 头部
+  ctx.fillRect(-2*s, -12*s, 4*s, 4*s);
+
+  // 眼睛
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(-2*s, -11*s, s, s);
+  ctx.fillRect(s, -11*s, s, s);
+  ctx.fillStyle = '#000';
+  ctx.fillRect(-2*s + (facing==='left'?0:0), -11*s, Math.ceil(s*0.6), Math.ceil(s*0.6));
+  ctx.fillRect(s, -11*s, Math.ceil(s*0.6), Math.ceil(s*0.6));
+
+  // 触角
+  ctx.fillStyle = color;
+  ctx.fillRect(-3*s, -14*s, s, 3*s);
+  ctx.fillRect(2*s, -14*s, s, 3*s);
+
+  // 钳子
+  const clawOffset = state === STATE.TYPING ? Math.sin(frame * 0.5) * s : 0;
+  ctx.fillRect(-5*s, -7*s + clawOffset, 2*s, 2*s);
+  ctx.fillRect(3*s, -7*s - clawOffset, 2*s, 2*s);
+
+  // 腿（走路动画）
+  const legSwing = state === STATE.WALKING ? Math.sin(frame * 0.3) * s : 0;
+  for (let i = 0; i < 3; i++) {
+    ctx.fillRect(-4*s, -4*s + i*s, s, s + (i%2===0 ? legSwing : -legSwing));
+    ctx.fillRect(3*s, -4*s + i*s, s, s + (i%2===0 ? -legSwing : legSwing));
+  }
+
+  // 尾巴
+  ctx.fillRect(-2*s, -2*s, s, 2*s);
+  ctx.fillRect(s, -2*s, s, 2*s);
+  ctx.fillRect(-s, 0, 2*s, s);
+
+  // 思考气泡（点点）
+  if (state === STATE.THINKING) {
+    const dotSize = Math.ceil(s * 0.6);
+    const dotAlpha = 0.3 + 0.7 * Math.abs(Math.sin(frame * 0.08));
+    ctx.fillStyle = `rgba(255,255,255,${dotAlpha})`;
+    ctx.fillRect(3*s, -15*s, dotSize, dotSize);
+    ctx.fillRect(5*s, -17*s, dotSize*1.2, dotSize*1.2);
+    ctx.fillRect(7*s, -20*s, dotSize*1.5, dotSize*1.5);
+  }
+
+  // 兴奋（星星）
+  if (state === STATE.EXCITED) {
+    const starAlpha = Math.abs(Math.sin(frame * 0.15));
+    ctx.fillStyle = `rgba(255,220,0,${starAlpha})`;
+    ctx.fillRect(-5*s, -16*s, s, s);
+    ctx.fillRect(4*s, -15*s, s, s);
+    ctx.fillRect(-3*s, -18*s, s, s);
+  }
+
+  // 难过（眼泪）
+  if (state === STATE.SAD) {
+    ctx.fillStyle = 'rgba(100,180,255,0.8)';
+    const tearY = (frame * 0.5) % (4*s);
+    ctx.fillRect(-s, -10*s + tearY, Math.ceil(s*0.5), s);
+  }
+
+  ctx.restore();
+}
+
+// ══════════════════════════════════════════════════════
+// 办公桌绘制
+// ══════════════════════════════════════════════════════
+function drawDesk(x, y, w, h, color, screenColor, screenText, glowColor) {
+  const s = SCALE;
+
+  // 桌子阴影
+  ctx.fillStyle = 'rgba(0,0,0,0.3)';
+  ctx.fillRect(x + 4, y + 4, w, h);
+
+  // 桌面
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, w, h);
+
+  // 桌子边框
+  ctx.fillStyle = 'rgba(0,0,0,0.4)';
+  ctx.fillRect(x, y + h - 3, w, 3);
+  ctx.fillRect(x + w - 3, y, 3, h);
+
+  // 桌腿
+  ctx.fillStyle = color;
+  ctx.fillRect(x + 4, y + h, 8, 16);
+  ctx.fillRect(x + w - 12, y + h, 8, 16);
+
+  // 显示器底座
+  const monX = x + w/2 - 20;
+  const monY = y - 50;
+  ctx.fillStyle = '#222';
+  ctx.fillRect(monX + 14, monY + 48, 12, 8);
+  ctx.fillRect(monX + 8, monY + 54, 24, 4);
+
+  // 显示器框
+  ctx.fillStyle = '#1a1a1a';
+  ctx.fillRect(monX, monY, 40, 46);
+
+  // 屏幕发光
+  ctx.fillStyle = glowColor;
+  ctx.fillRect(monX + 2, monY + 2, 36, 42);
+
+  // 屏幕内容
+  ctx.fillStyle = screenColor;
+  ctx.font = `${6*s}px "Press Start 2P"`;
+  ctx.textAlign = 'center';
+
+  // 滚动数字效果
+  if (screenText) {
+    const lines = screenText.split('\n');
+    lines.forEach((line, i) => {
+      ctx.fillText(line, monX + 20, monY + 14 + i * 14);
+    });
+  }
+
+  // 键盘
+  ctx.fillStyle = '#333';
+  ctx.fillRect(x + 8, y + 8, 40, 14);
+  ctx.fillStyle = '#444';
+  for (let ki = 0; ki < 5; ki++) {
+    for (let kj = 0; kj < 10; kj++) {
+      ctx.fillRect(x + 10 + ki*8, y + 10 + kj*3, 6, 2);
+    }
+  }
+
+  // 咖啡杯
+  ctx.fillStyle = '#8b4513';
+  ctx.fillRect(x + w - 20, y + 6, 12, 14);
+  ctx.fillStyle = '#6b3410';
+  ctx.fillRect(x + w - 18, y + 8, 8, 4);
+  // 蒸汽
+  ctx.fillStyle = 'rgba(200,200,200,0.5)';
+  const steamY = Math.sin(Date.now() * 0.003) * 2;
+  ctx.fillRect(x + w - 16, y + steamY - 4, 2, 4);
+  ctx.fillRect(x + w - 12, y + steamY - 6, 2, 6);
+}
+
+// ══════════════════════════════════════════════════════
+// 房间背景绘制
+// ══════════════════════════════════════════════════════
+function drawRoom(W, H) {
+  // 地板
+  const floorGrad = ctx.createLinearGradient(0, H*0.55, 0, H);
+  floorGrad.addColorStop(0, '#c8b896');
+  floorGrad.addColorStop(1, '#b0a080');
+  ctx.fillStyle = floorGrad;
+  ctx.fillRect(0, H*0.55, W, H*0.45);
+
+  // 地板格子
+  ctx.strokeStyle = 'rgba(0,0,0,0.08)';
+  ctx.lineWidth = 1;
+  const tileSize = 48;
+  for (let tx = 0; tx < W; tx += tileSize) {
+    ctx.beginPath();
+    ctx.moveTo(tx, H*0.55);
+    ctx.lineTo(tx, H);
+    ctx.stroke();
+  }
+  for (let ty = H*0.55; ty < H; ty += tileSize/2) {
+    ctx.beginPath();
+    ctx.moveTo(0, ty);
+    ctx.lineTo(W, ty);
+    ctx.stroke();
+  }
+
+  // 墙壁
+  const wallGrad = ctx.createLinearGradient(0, 0, 0, H*0.55);
+  wallGrad.addColorStop(0, '#2a1f14');
+  wallGrad.addColorStop(1, '#3d2d1a');
+  ctx.fillStyle = wallGrad;
+  ctx.fillRect(0, 0, W, H*0.55);
+
+  // 墙壁装饰线
+  ctx.fillStyle = '#4a3520';
+  ctx.fillRect(0, H*0.54, W, 4);
+  ctx.fillStyle = '#5a4530';
+  ctx.fillRect(0, H*0.50, W, 2);
+
+  // 公司名牌（墙上）
+  ctx.fillStyle = '#8b6914';
+  ctx.fillRect(W/2 - 120, 20, 240, 60);
+  ctx.fillStyle = '#ffd700';
+  ctx.font = '10px "Press Start 2P"';
+  ctx.textAlign = 'center';
+  ctx.fillText('LOBSTER CAPITAL', W/2, 48);
+  ctx.font = '7px "Press Start 2P"';
+  ctx.fillStyle = '#c8a830';
+  ctx.fillText('EST. 2026', W/2, 68);
+
+  // 时钟（墙上）
+  const now = new Date();
+  const hr = now.getHours(), mn = now.getMinutes(), sc = now.getSeconds();
+  ctx.fillStyle = '#2a1f14';
+  ctx.beginPath();
+  ctx.arc(W - 60, 50, 30, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.strokeStyle = '#8b6914';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.arc(W - 60, 50, 30, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // 时针
+  const hrAngle = ((hr%12) + mn/60) / 12 * Math.PI * 2 - Math.PI/2;
+  ctx.strokeStyle = '#ffd700';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(W-60, 50);
+  ctx.lineTo(W-60 + Math.cos(hrAngle)*16, 50 + Math.sin(hrAngle)*16);
+  ctx.stroke();
+
+  // 分针
+  const mnAngle = mn / 60 * Math.PI * 2 - Math.PI/2;
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(W-60, 50);
+  ctx.lineTo(W-60 + Math.cos(mnAngle)*22, 50 + Math.sin(mnAngle)*22);
+  ctx.stroke();
+
+  // 窗户
+  drawWindow(60, 30, 80, 100);
+  drawWindow(200, 30, 80, 100);
+
+  // 盆栽
+  drawPlant(30, H*0.55 - 40);
+  drawPlant(W - 50, H*0.55 - 40);
+}
+
+function drawWindow(x, y, w, h) {
+  // 窗框
+  ctx.fillStyle = '#5a4520';
+  ctx.fillRect(x, y, w, h);
+  // 天空/城市
+  const skyGrad = ctx.createLinearGradient(x, y, x, y+h);
+  skyGrad.addColorStop(0, '#1a0a2e');
+  skyGrad.addColorStop(1, '#2d1a4a');
+  ctx.fillStyle = skyGrad;
+  ctx.fillRect(x+4, y+4, w-8, h-8);
+  // 城市建筑剪影
+  ctx.fillStyle = '#0d0520';
+  ctx.fillRect(x+4, y+h-30, 15, 26);
+  ctx.fillRect(x+22, y+h-40, 12, 36);
+  ctx.fillRect(x+37, y+h-25, 18, 21);
+  ctx.fillRect(x+58, y+h-35, 14, 31);
+  // 窗格
+  ctx.strokeStyle = '#5a4520';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(x + w/2, y+4);
+  ctx.lineTo(x + w/2, y+h-4);
+  ctx.moveTo(x+4, y + h/2);
+  ctx.lineTo(x+w-4, y + h/2);
+  ctx.stroke();
+  // 霓虹灯光效果
+  ctx.fillStyle = 'rgba(255,50,100,0.6)';
+  ctx.fillRect(x+6, y+h-22, 4, 4);
+  ctx.fillStyle = 'rgba(50,100,255,0.6)';
+  ctx.fillRect(x+24, y+h-36, 4, 4);
+  ctx.fillStyle = 'rgba(50,255,150,0.6)';
+  ctx.fillRect(x+60, y+h-26, 4, 4);
+}
+
+function drawPlant(x, y) {
+  // 花盆
+  ctx.fillStyle = '#8b4513';
+  ctx.fillRect(x-10, y+10, 20, 20);
+  ctx.fillStyle = '#6b3410';
+  ctx.fillRect(x-12, y+8, 24, 5);
+  // 土
+  ctx.fillStyle = '#3d2008';
+  ctx.fillRect(x-8, y+10, 16, 6);
+  // 茎
+  ctx.fillStyle = '#228b22';
+  ctx.fillRect(x-1, y-20, 3, 30);
+  // 叶子
+  ctx.fillStyle = '#2ea82e';
+  ctx.fillRect(x-12, y-15, 14, 8);
+  ctx.fillRect(x, y-20, 14, 8);
+  ctx.fillRect(x-10, y-5, 12, 8);
+  // 叶脉
+  ctx.fillStyle = '#1a6b1a';
+  ctx.fillRect(x-8, y-12, 8, 2);
+  ctx.fillRect(x+4, y-17, 8, 2);
+}
+
+// ══════════════════════════════════════════════════════
+// 游戏状态
+// ══════════════════════════════════════════════════════
+let frame = 0;
+let btcPrice = 0;
+let priceChange = 0;
+
+// 交易龙虾状态
+let traderState = STATE.IDLE;
+let traderX = 0, traderY = 0;  // 相对于桌子的偏移（走路时用）
+let traderFacing = 'right';
+let traderScreenText = 'BTC\n---';
+let lastBotTrade = '';
+
+// 研究龙虾状态
+let researcherState = STATE.THINKING;
+let researcherFacing = 'left';
+let researcherScreenText = 'SCAN\n...';
+let lastResTime = '';
+
+// 气泡
+let traderBubbleTimer = 0;
+let researcherBubbleTimer = 0;
+
+function setTraderBubble(text, duration=4000) {
+  const el = document.getElementById('bubble-trader');
+  el.textContent = text;
+  el.classList.add('show');
+  traderBubbleTimer = duration;
+}
+
+function setResearchBubble(text, duration=4000) {
+  const el = document.getElementById('bubble-researcher');
+  el.textContent = text;
+  el.classList.add('show');
+  researcherBubbleTimer = duration;
+}
+
+// ══════════════════════════════════════════════════════
+// 主渲染循环
+// ══════════════════════════════════════════════════════
+function render() {
+  const W = canvas.width, H = canvas.height;
+  ctx.clearRect(0, 0, W, H);
+
+  // 画背景
+  drawRoom(W, H);
+
+  // 桌子位置
+  const deskY = H * 0.55 - 80;
+  const traderDeskX = W * 0.18;
+  const researchDeskX = W * 0.62;
+  const deskW = 140, deskH = 50;
+
+  // 屏幕文字更新
+  if (btcPrice > 0) {
+    const priceShort = Math.round(btcPrice).toLocaleString('en').slice(-6);
+    const chgStr = (priceChange >= 0 ? '+' : '') + priceChange.toFixed(1) + '%';
+    traderScreenText = '$' + priceShort + '\n' + chgStr;
+  }
+
+  // 画交易员桌子
+  drawDesk(
+    traderDeskX, deskY, deskW, deskH,
+    '#6b4226', '#00ff88', traderScreenText,
+    'rgba(0,80,40,0.7)'
+  );
+
+  // 画研究员桌子
+  drawDesk(
+    researchDeskX, deskY, deskW, deskH,
+    '#3d2060', '#b464ff', researcherScreenText,
+    'rgba(60,20,100,0.7)'
+  );
+
+  // 中间小白板
+  const wbX = W/2 - 40, wbY = H*0.55 - 120;
+  ctx.fillStyle = '#f5f5dc';
+  ctx.fillRect(wbX, wbY, 80, 60);
+  ctx.fillStyle = '#8b6914';
+  ctx.fillRect(wbX-3, wbY-3, 86, 66);
+  ctx.fillRect(wbX, wbY+58, 80, 8);
+  // 白板上的字
+  ctx.fillStyle = '#1a1a1a';
+  ctx.font = '5px "Press Start 2P"';
+  ctx.textAlign = 'center';
+  ctx.fillText('PROFIT', W/2, wbY + 15);
+  ctx.fillText('TARGET', W/2, wbY + 28);
+  ctx.fillStyle = '#00aa44';
+  ctx.fillText('$6,600', W/2, wbY + 44);
+
+  // 画龙虾（在桌子前面）
+  const traderLobsterX = traderDeskX + deskW/2 + traderX;
+  const traderLobsterY = deskY + deskH + 30 + traderY;
+  drawLobster(
+    traderLobsterX, traderLobsterY,
+    2, '#e05020', traderState, frame, traderFacing
+  );
+
+  const researchLobsterX = researchDeskX + deskW/2 + (researcherFacing === 'left' ? 15 : -15);
+  const researchLobsterY = deskY + deskH + 30;
+  drawLobster(
+    researchLobsterX, researchLobsterY,
+    2, '#8b2090', researcherState, frame, researcherFacing
+  );
+
+  // 更新气泡位置
+  const traderBubbleEl = document.getElementById('bubble-trader');
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = rect.width / canvas.width;
+  const scaleY = rect.height / canvas.height;
+
+  traderBubbleEl.style.left = (traderLobsterX - 80) * scaleX + 'px';
+  traderBubbleEl.style.top = (traderLobsterY - 120) * scaleY + 'px';
+
+  const resBubbleEl = document.getElementById('bubble-researcher');
+  resBubbleEl.style.left = (researchLobsterX - 120) * scaleX + 'px';
+  resBubbleEl.style.top = (researchLobsterY - 120) * scaleY + 'px';
+
+  // 气泡计时
+  if (traderBubbleTimer > 0) {
+    traderBubbleTimer -= 16;
+    if (traderBubbleTimer <= 0) traderBubbleEl.classList.remove('show');
+  }
+  if (researcherBubbleTimer > 0) {
+    researcherBubbleTimer -= 16;
+    if (researcherBubbleTimer <= 0) resBubbleEl.classList.remove('show');
+  }
+
+  // 地板阴影（角色下方）
+  ctx.fillStyle = 'rgba(0,0,0,0.15)';
+  ctx.beginPath();
+  ctx.ellipse(traderLobsterX, traderLobsterY + 4, 16, 6, 0, 0, Math.PI*2);
+  ctx.fill();
+  ctx.beginPath();
+  ctx.ellipse(researchLobsterX, researchLobsterY + 4, 16, 6, 0, 0, Math.PI*2);
+  ctx.fill();
+
+  frame++;
+  requestAnimationFrame(render);
+}
+
+// ══════════════════════════════════════════════════════
+// 数据获取与状态更新
+// ══════════════════════════════════════════════════════
+async function fetchPrice() {
+  try {
+    const r = await fetch('/api/ticker?symbol=BTC-USDT');
+    const d = await r.json();
+    btcPrice = parseFloat(d.data[0].last);
+    priceChange = parseFloat(d.data[0].chg24h||0)*100;
+
+    const ps = '$' + Math.round(btcPrice).toLocaleString('en');
+    document.getElementById('h-price').textContent = ps;
+    const chgEl = document.getElementById('h-chg');
+    const cs = (priceChange>=0?'+':'')+priceChange.toFixed(2)+'%';
+    chgEl.textContent = cs;
+    chgEl.className = 'hud-chg ' + (priceChange>=0?'up':'dn');
+  } catch {}
+}
+
+async function fetchState() {
+  try {
+    const r = await fetch('/api/state');
+    const d = await r.json();
+    const bs = d.bot_stats || {};
+    const capital = 3208 + (bs.total_pnl_usdt||0);
+    const target = d.goal?.round_target || 6600;
+    const wr = bs.total > 0 ? (bs.wins/bs.total*100).toFixed(0) : '--';
+
+    document.getElementById('h-capital').textContent = '$' + Math.round(capital).toLocaleString('en');
+    document.getElementById('h-target').textContent = '$' + Math.round(target).toLocaleString('en');
+    document.getElementById('h-wr').textContent = wr + '%';
+
+    // 交易龙虾持仓
+    const bt = d.bot_trade;
+    if (bt) {
+      const pnlPts = bt.direction==='做多' ? (btcPrice-bt.entry_price) : (bt.entry_price-btcPrice);
+      const pnlUsd = pnlPts * bt.size;
+
+      document.getElementById('d-dir').textContent = bt.direction;
+      document.getElementById('d-dir').className = 'dp-item-val ' + (bt.direction==='做多'?'long':'short');
+      document.getElementById('d-pnl').textContent = (pnlUsd>=0?'+':'') + Math.round(pnlUsd) + 'U';
+      document.getElementById('d-pnl').className = 'dp-item-val ' + (pnlUsd>=0?'long':'short');
+      document.getElementById('d-entry').textContent = '$' + Math.round(bt.entry_price).toLocaleString('en');
+      document.getElementById('d-wl').textContent = (bs.wins||0) + 'W/' + (bs.losses||0) + 'L';
+
+      const key = bt.time + bt.direction;
+      if (key !== lastBotTrade) {
+        lastBotTrade = key;
+        traderState = STATE.EXCITED;
+        const msg = bt.direction==='做多' ? 'LONG!\n$' + Math.round(bt.entry_price).toLocaleString('en').slice(-5) : 'SHORT!\n$' + Math.round(bt.entry_price).toLocaleString('en').slice(-5);
+        setTraderBubble(bt.direction === '做多' ? '做多了！冲冲冲！' : '做空了！压压压！', 5000);
+
+        setTimeout(() => setResearchBubble('已收到交易员的开仓信号，继续监控...', 4000), 2000);
+        setTimeout(() => { traderState = STATE.TYPING; }, 3000);
+      }
+
+      // 持仓时的动画
+      if (pnlUsd > 100) {
+        traderState = STATE.EXCITED;
+      } else if (pnlUsd < -100) {
+        traderState = STATE.SAD;
+      } else {
+        if (traderState !== STATE.EXCITED && traderState !== STATE.TYPING) {
+          traderState = STATE.TYPING;
+        }
+      }
+    } else {
+      if (traderState !== STATE.THINKING) traderState = STATE.IDLE;
+      document.getElementById('d-dir').textContent = '空仓';
+      document.getElementById('d-dir').className = 'dp-item-val';
+      document.getElementById('d-pnl').textContent = '--';
+      document.getElementById('d-entry').textContent = '--';
+      document.getElementById('d-wl').textContent = (bs.wins||0) + 'W/' + (bs.losses||0) + 'L';
+      lastBotTrade = null;
+    }
+
+    // 研究助手
+    const rb = d.research_brief;
+    if (rb) {
+      document.getElementById('h-research').textContent = rb.conclusion || '--';
+      document.getElementById('d-conclusion').textContent = rb.conclusion || '--';
+      document.getElementById('d-conclusion').className = 'dp-item-val ' + (rb.conclusion==='做多'?'long':rb.conclusion==='做空'?'short':'purple');
+      document.getElementById('d-confidence').textContent = rb.confidence || '--';
+      document.getElementById('d-logic').textContent = (rb.core_logic || '--').slice(0, 30);
+      if (rb.fear_greed) {
+        document.getElementById('d-fg').textContent = rb.fear_greed.value + '/100';
+      }
+
+      const rsConcl = rb.conclusion || '观望';
+      const rsShort = rsConcl === '做多' ? 'BULL\n↑↑↑' : rsConcl === '做空' ? 'BEAR\n↓↓↓' : 'HOLD\n~~~';
+      researcherScreenText = rsShort;
+
+      if (rb.time !== lastResTime) {
+        lastResTime = rb.time;
+        researcherState = STATE.EXCITED;
+        setResearchBubble('分析完成！结论：' + (rb.conclusion||'观望') + '，' + (rb.core_logic||'').slice(0,20), 6000);
+        setTimeout(() => {
+          const reply = !bt ? '收到！我综合技术面再决定。' : (bt?.direction === rb.conclusion ? '方向一致，保持！' : '我们判断不同，谨慎！');
+          setTraderBubble(reply, 4000);
+          traderState = STATE.TALKING;
+          setTimeout(() => { traderState = STATE.TYPING; }, 3000);
+        }, 3000);
+        setTimeout(() => { researcherState = STATE.THINKING; }, 5000);
+      }
+    }
+
+    // 随机小动作（让角色更有生命力）
+    if (frame % 300 === 0) {
+      if (traderState === STATE.TYPING || traderState === STATE.IDLE) {
+        const actions = [STATE.IDLE, STATE.TYPING, STATE.THINKING];
+        traderState = actions[Math.floor(Math.random() * actions.length)];
+      }
+    }
+    if (frame % 400 === 0) {
+      researcherState = researcherState === STATE.THINKING ? STATE.IDLE : STATE.THINKING;
+    }
+
+  } catch(e) { console.error(e); }
+}
+
+function updateTime() {
+  const t = new Date();
+  document.getElementById('h-time').textContent = t.toTimeString().slice(0,8);
+}
+
+// 初始气泡
+setTimeout(() => setTraderBubble('早上好！准备开始交易！', 4000), 1000);
+setTimeout(() => setResearchBubble('宏观扫描中...请稍候...', 4000), 2500);
+
+// 启动
+render();
+setInterval(fetchPrice, 1000);
+setInterval(fetchState, 5000);
+setInterval(updateTime, 1000);
+fetchPrice();
+fetchState();
+</script>
+</body>
+</html>
