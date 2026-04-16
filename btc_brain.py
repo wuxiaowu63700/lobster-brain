@@ -2572,11 +2572,21 @@ def run_analysis():
             send_telegram("❌ <b>龙虾止损</b>\n方向:{} 亏损:{:.0f}点 / {:.1f}U".format(_direction, _sl_pts, _pnl_u))
             log("龙虾止损: {} -{:.0f}点".format(_direction, _sl_pts))
         else:
-            # 止盈检查
-            for _tg in _targets:
-                _hit_tp = (_direction == "做多" and price >= _tg["price"]) or (_direction == "做空" and price <= _tg["price"])
-                if _hit_tp:
-                    _tp_pts = round(abs(_tg["price"] - _ep))
+            # 移动止损跟踪止盈（到达2000点后跟踪，回撤200点出场）
+            _pnl_now = round(_ep - price) if _direction == "做空" else round(price - _ep)
+
+            # 更新最高浮盈
+            _peak = _bot_trade.get("peak_pnl", 0)
+            if _pnl_now > _peak:
+                memory["bot_trade"]["peak_pnl"] = _pnl_now
+                save_memory(memory)
+                _peak = _pnl_now
+
+            # 到达2000点后启动移动止损跟踪
+            if _peak >= 2000:
+                _trail_sl = _peak - 200  # 从峰值回撤200点出场
+                if _pnl_now <= _trail_sl:
+                    _tp_pts = round(_pnl_now)
                     _pnl_u = round(_tp_pts * _size, 2)
                     memory["bot_trade"] = None
                     bs = memory.get("bot_stats", {})
@@ -2586,9 +2596,26 @@ def run_analysis():
                     bs["total_pnl_usdt"] = bs.get("total_pnl_usdt", 0) + _pnl_u
                     memory["bot_stats"] = bs
                     save_memory(memory)
-                    send_telegram("✅ <b>龙虾止盈</b>\n方向:{} 盈利:+{:.0f}点 / +{:.1f}U".format(_direction, _tp_pts, _pnl_u))
-                    log("龙虾止盈: {} +{:.0f}点".format(_direction, _tp_pts))
-                    break
+                    send_telegram("✅ <b>龙虾移动止盈</b>\n方向:{} 峰值:{:.0f}点 出场:{:.0f}点 / +{:.1f}U".format(_direction, _peak, _tp_pts, _pnl_u))
+                    log("龙虾移动止盈: {} 峰值{}点 出场{}点".format(_direction, _peak, _tp_pts))
+            else:
+                # 未到2000点，用固定目标位止盈
+                for _tg in _targets:
+                    _hit_tp = (_direction == "做多" and price >= _tg["price"]) or (_direction == "做空" and price <= _tg["price"])
+                    if _hit_tp:
+                        _tp_pts = round(abs(_tg["price"] - _ep))
+                        _pnl_u = round(_tp_pts * _size, 2)
+                        memory["bot_trade"] = None
+                        bs = memory.get("bot_stats", {})
+                        bs["wins"] = bs.get("wins", 0) + 1
+                        bs["total"] = bs.get("total", 0) + 1
+                        bs["total_pnl_points"] = bs.get("total_pnl_points", 0) + _tp_pts
+                        bs["total_pnl_usdt"] = bs.get("total_pnl_usdt", 0) + _pnl_u
+                        memory["bot_stats"] = bs
+                        save_memory(memory)
+                        send_telegram("✅ <b>龙虾止盈</b>\n方向:{} 盈利:+{:.0f}点 / +{:.1f}U".format(_direction, _tp_pts, _pnl_u))
+                        log("龙虾止盈: {} +{:.0f}点".format(_direction, _tp_pts))
+                        break
 
     # ── 加仓持仓检查（bot_trade2）──────────────────
     _bt2 = memory.get("bot_trade2")
