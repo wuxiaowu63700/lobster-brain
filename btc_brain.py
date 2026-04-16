@@ -263,12 +263,15 @@ def bitget_sign(method, path):
     ).decode()
     return ts, sign
 
+PROXIES = {"http": "http://127.0.0.1:7897", "https": "http://127.0.0.1:7897"}
+
 def get_bitget_long_short():
     try:
         path = "/api/v2/mix/market/long-short?symbol=BTCUSDT&productType=USDT-FUTURES&period=1h"
         ts, sign = bitget_sign("GET", path)
         r = requests.get(
             "https://api.bitget.com" + path,
+            proxies=PROXIES,
             headers={"ACCESS-KEY": BITGET_API_KEY, "ACCESS-SIGN": sign,
                      "ACCESS-TIMESTAMP": ts, "ACCESS-PASSPHRASE": BITGET_PASSPHRASE},
             timeout=8
@@ -290,6 +293,7 @@ def get_bitget_funding():
         ts, sign = bitget_sign("GET", path)
         r = requests.get(
             "https://api.bitget.com" + path,
+            proxies=PROXIES,
             headers={"ACCESS-KEY": BITGET_API_KEY, "ACCESS-SIGN": sign,
                      "ACCESS-TIMESTAMP": ts, "ACCESS-PASSPHRASE": BITGET_PASSPHRASE},
             timeout=8
