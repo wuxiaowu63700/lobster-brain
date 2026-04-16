@@ -51,9 +51,19 @@ requests.post = _post
 # ============================================================
 TELEGRAM_BOT_TOKEN = "8681680971:AAG7AwTQEBncL0zojd8QteijOhm-69oS__U"
 TELEGRAM_CHAT_ID = "5475370058"
-OPENROUTER_API_KEY = "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"
-BRAVE_API_KEY = "BSA4XmfxU_ynYiBbsE8cN6G-DC9kAmd"
-BITGET_API_KEY = "bg_2dd416b86636bb1c58eb77826098eb0d"
+# 从.env文件读取密钥
+def _load_env():
+    env_file = os.path.join(os.path.dirname(__file__), ".env")
+    if os.path.exists(env_file):
+        for line in open(env_file):
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ[k.strip()] = v.strip()
+_load_env()
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
+BRAVE_API_KEY = os.environ.get("BRAVE_API_KEY", "")
+BITGET_API_KEY = os.environ.get("BITGET_API_KEY", "")
 BITGET_SECRET = "29cedf15dbd455a7542316d799fb995620d9879e38bdf906ec5c32c08c674d02"
 BITGET_PASSPHRASE = "12345678123456781234567812345678"
 
@@ -1676,10 +1686,10 @@ def alert_thread():
 def claude_request(prompt, max_tokens=1500):
     try:
         r = requests.post(
-            "https://openrouter.ai/api/v1/chat/completions",
+            "https://api.gptsapi.net/v1/chat/completions",
             headers={"Authorization": "Bearer {}".format(OPENROUTER_API_KEY),
                      "Content-Type": "application/json"},
-            json={"model": "anthropic/claude-4.5-haiku-20251001",
+            json={"model": "gpt-4o-mini",
                   "messages": [{"role": "user", "content": prompt}],
                   "max_tokens": max_tokens},
             timeout=45
