@@ -2310,6 +2310,64 @@ def handle_tg_command(text):
         msg += "\n\n<i>— 龙虾交易大脑</i>"
         send_telegram(msg)
 
+    elif any(kw in text for kw in ["计划", "等什么", "等哪里", "在等", "入场计划"]):
+        # 量化计划大白话
+        price = get_current_price()
+        try:
+            c4h = get_klines("4H", 20)
+            c1h = get_klines("1H", 50)
+            closes_4h = [c["close"] for c in c4h]
+            rsi_4h = calc_rsi(closes_4h)
+            ema20 = sum(closes_4h[-20:]) / 20
+            highs = [c["high"] for c in c4h]
+            lows = [c["low"] for c in c4h]
+            high = max(highs)
+            low = min(lows)
+            diff = high - low
+            fibs = [
+                ("F38.2%", round(high - diff * 0.382)),
+                ("F50%",   round(high - diff * 0.5)),
+                ("F61.8%", round(high - diff * 0.618)),
+                ("F78.6%", round(high - diff * 0.786)),
+            ]
+            closes_1h = [c["close"] for c in c1h]
+            bb_u, bb_m, bb_l = calc_bollinger(closes_1h)
+            bb_width = round((bb_u - bb_l) / bb_m * 100, 1) if bb_u and bb_l and bb_m else 0
+
+            msg = "🦞 <b>龙虾量化计划</b>\n"
+            msg += "─────────────────────\n"
+            msg += "当前价格: ${:,.0f}\n".format(price)
+            msg += "4H RSI: {:.0f} | EMA20: ${:,.0f}\n".format(rsi_4h, ema20)
+            msg += "布林带宽度: {:.1f}%（需要>3%才开仓）\n\n".format(bb_width)
+
+            if rsi_4h > 55 and price > ema20:
+                msg += "📈 <b>趋势：做多方向</b>\n"
+                msg += "等待价格回调到以下Fib支撑位附近再做多：\n"
+                for name, fp in fibs:
+                    dist = int(fp - price)
+                    if dist < 0:
+                        msg += "  {} ${:,.0f}（需跌{:.0f}点）\n".format(name, fp, abs(dist))
+            elif rsi_4h < 45 and price < ema20:
+                msg += "📉 <b>趋势：做空方向</b>\n"
+                msg += "等待价格反弹到以下Fib压力位附近再做空：\n"
+                for name, fp in fibs:
+                    dist = int(fp - price)
+                    if dist > 0:
+                        msg += "  {} ${:,.0f}（需涨{:.0f}点）\n".format(name, fp, dist)
+            else:
+                msg += "⏳ <b>趋势：中性观望</b>\n"
+                msg += "RSI{:.0f}在45-55之间，方向不明\n".format(rsi_4h)
+                msg += "等RSI突破55做多，或跌破45做空\n\n"
+                msg += "关键Fib位参考：\n"
+                for name, fp in fibs:
+                    dist = int(fp - price)
+                    msg += "  {} ${:,.0f}（{:+.0f}点）\n".format(name, fp, dist)
+
+            msg += "\n止损：200点 | 止盈：2000点+"
+            send_telegram(msg)
+        except Exception as e:
+            send_telegram("计划获取失败: {}".format(str(e)[:50]))
+
     elif "状态" in text or "status" in text_lower:
         memory = load_memory()
         trades = memory.get("real_trades", [])
