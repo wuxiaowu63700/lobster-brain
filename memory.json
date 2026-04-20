@@ -202,65 +202,164 @@
       "closed_time": "04-16 23:46",
       "closed_price": 74663.0,
       "close_type": "自动"
+    },
+    {
+      "direction": "做空",
+      "strength": "强",
+      "time": "04-16 23:46",
+      "price_at_signal": 74663.0,
+      "entry_low": 74563.0,
+      "entry_high": 74863.0,
+      "stop_loss": 75444.0,
+      "target": 73663.0,
+      "stop_loss_points": 781,
+      "result": "止损",
+      "pnl_points": -781,
+      "closed_time": "04-17 16:49",
+      "closed_price": 75557.3,
+      "close_type": "自动"
+    },
+    {
+      "direction": "做多",
+      "strength": "强",
+      "time": "04-17 16:49",
+      "price_at_signal": 75557.3,
+      "entry_low": 75357.3,
+      "entry_high": 75657.3,
+      "stop_loss": 74987.3,
+      "target": 76557.3,
+      "stop_loss_points": 570,
+      "result": "止盈",
+      "pnl_points": 1000,
+      "closed_time": "04-17 21:15",
+      "closed_price": 76850.0,
+      "close_type": "自动"
+    },
+    {
+      "direction": "做多",
+      "strength": "强",
+      "time": "04-17 21:25",
+      "price_at_signal": 76922.2,
+      "entry_low": 76722.2,
+      "entry_high": 77022.2,
+      "stop_loss": 76187.2,
+      "target": 77922.2,
+      "stop_loss_points": 735,
+      "result": "止盈",
+      "pnl_points": 1000,
+      "closed_time": "04-17 22:43",
+      "closed_price": 78036.8,
+      "close_type": "自动"
+    },
+    {
+      "direction": "做多",
+      "strength": "强",
+      "time": "04-17 22:53",
+      "price_at_signal": 77886.1,
+      "entry_low": 77686.1,
+      "entry_high": 77986.1,
+      "stop_loss": 77086.1,
+      "target": 78886.1,
+      "stop_loss_points": 800,
+      "result": "止损",
+      "pnl_points": -800,
+      "closed_time": "04-18 03:06",
+      "closed_price": 77049.3,
+      "close_type": "自动"
+    },
+    {
+      "direction": "做空",
+      "strength": "强",
+      "time": "04-18 03:06",
+      "price_at_signal": 77049.3,
+      "entry_low": 76949.3,
+      "entry_high": 77249.3,
+      "stop_loss": 77849.3,
+      "target": 76049.3,
+      "stop_loss_points": 800,
+      "result": "止盈",
+      "pnl_points": 1000,
+      "closed_time": "04-18 19:08",
+      "closed_price": 75984.1,
+      "close_type": "自动"
+    },
+    {
+      "direction": "做多",
+      "strength": "强",
+      "time": "04-19 02:48",
+      "price_at_signal": 75708.8,
+      "entry_low": 75508.8,
+      "entry_high": 75808.8,
+      "stop_loss": 75191.8,
+      "target": 76708.8,
+      "stop_loss_points": 517,
+      "result": "止损",
+      "pnl_points": -517,
+      "closed_time": "04-19 15:21",
+      "closed_price": 75081.6,
+      "close_type": "自动"
+    },
+    {
+      "direction": "做空",
+      "strength": "强",
+      "time": "04-19 15:52",
+      "price_at_signal": 75224.0,
+      "entry_low": 75124.0,
+      "entry_high": 75424.0,
+      "stop_loss": 75724.0,
+      "target": 74224.0,
+      "stop_loss_points": 500,
+      "result": "止损",
+      "pnl_points": -500,
+      "closed_time": "04-19 21:09",
+      "closed_price": 75766.6,
+      "close_type": "自动"
+    },
+    {
+      "direction": "做多",
+      "strength": "强",
+      "time": "04-19 21:51",
+      "price_at_signal": 75916.3,
+      "entry_low": 75716.3,
+      "entry_high": 76016.3,
+      "stop_loss": 75397.3,
+      "target": 76916.3,
+      "stop_loss_points": 519,
+      "result": "止损",
+      "pnl_points": -519,
+      "closed_time": "04-20 01:04",
+      "closed_price": 75366.8,
+      "close_type": "自动"
+    },
+    {
+      "direction": "做空",
+      "strength": "强",
+      "time": "04-20 07:23",
+      "price_at_signal": 73856.7,
+      "entry_low": 73756.7,
+      "entry_high": 74056.7,
+      "stop_loss": 74587.7,
+      "target": 72856.7,
+      "stop_loss_points": 731,
+      "result": "止损",
+      "pnl_points": -731,
+      "closed_time": "04-20 09:42",
+      "closed_price": 74673.6,
+      "close_type": "自动"
     }
   ],
   "active_signal": {
     "direction": "做空",
     "strength": "强",
-    "time": "04-16 23:46",
-    "price_at_signal": 74663.0,
-    "entry_low": 74563.0,
-    "entry_high": 74863.0,
-    "stop_loss": 75444.0,
-    "target": 73663.0,
-    "stop_loss_points": 781
+    "time": "04-20 09:47",
+    "price_at_signal": 74726.1,
+    "entry_low": 74626.1,
+    "entry_high": 74926.1,
+    "stop_loss": 75504.1,
+    "target": 73726.1,
+    "stop_loss_points": 778
   },
   "reflections": [
-    {
-      "time": "04-07 23:04",
-      "signal": "做空 止盈 +1000点",
-      "content": "无"
-    },
-    {
-      "time": "04-08 01:35",
-      "signal": "做空 止损 -582点",
-      "content": "无"
-    },
-    {
-      "time": "04-08 04:08",
-      "signal": "做空 止损 -690点",
-      "content": "无"
-    },
-    {
-      "time": "04-08 06:26",
-      "signal": "做空 止损 -772点",
-      "content": "无"
-    },
-    {
-      "time": "04-08 06:57",
-      "signal": "做空 止损 -800点",
-      "content": "无"
-    },
-    {
-      "time": "04-08 22:35",
-      "signal": "做多 止损 -800点",
-      "content": "无"
-    },
-    {
-      "time": "04-09 01:51",
-      "signal": "做空 止损 -680点",
-      "content": "无"
-    },
-    {
-      "time": "04-09 07:29",
-      "signal": "做多 止损 -752点",
-      "content": "无"
-    },
-    {
-      "time": "04-10 01:01",
-      "signal": "做多 止盈 +1000点",
-      "content": "无"
-    },
     {
       "time": "04-10 22:20",
       "signal": "做空 止损 -707点",
@@ -315,15 +414,60 @@
       "time": "04-16 23:46",
       "signal": "做空 止损 -696点",
       "content": "无"
+    },
+    {
+      "time": "04-17 16:49",
+      "signal": "做空 止损 -781点",
+      "content": "无"
+    },
+    {
+      "time": "04-17 21:15",
+      "signal": "做多 止盈 +1000点",
+      "content": "无"
+    },
+    {
+      "time": "04-17 22:43",
+      "signal": "做多 止盈 +1000点",
+      "content": "无"
+    },
+    {
+      "time": "04-18 03:06",
+      "signal": "做多 止损 -800点",
+      "content": "无"
+    },
+    {
+      "time": "04-18 19:08",
+      "signal": "做空 止盈 +1000点",
+      "content": "无"
+    },
+    {
+      "time": "04-19 15:21",
+      "signal": "做多 止损 -517点",
+      "content": "无"
+    },
+    {
+      "time": "04-19 21:09",
+      "signal": "做空 止损 -500点",
+      "content": "无"
+    },
+    {
+      "time": "04-20 01:04",
+      "signal": "做多 止损 -519点",
+      "content": "无"
+    },
+    {
+      "time": "04-20 09:42",
+      "signal": "做空 止损 -731点",
+      "content": "无"
     }
   ],
   "stats": {
-    "total": 49,
-    "wins": 29,
-    "losses": 20,
-    "manual_closes": 18,
-    "total_pnl_points": -646,
-    "total_pnl_usdt": 118.77000000000001
+    "total": 61,
+    "wins": 35,
+    "losses": 26,
+    "manual_closes": 21,
+    "total_pnl_points": 1849,
+    "total_pnl_usdt": 509
   },
   "real_trade": null,
   "bot_stats": {
@@ -341,8 +485,8 @@
     "round_target": 6600,
     "description": "每轮从3300翻倍到6600，完成10次即为终极目标"
   },
-  "last_push_price": 74721.4,
-  "last_push_direction": "观望",
+  "last_push_price": 75923.2,
+  "last_push_direction": "做空",
   "bot_reflections": [
     {
       "time": "03-28 23:19",
@@ -674,5 +818,6 @@
       "note": "第一次提现"
     }
   ],
-  "total_withdrawn": 1000
+  "total_withdrawn": 1000,
+  "fuse_until": 1776705549.4217029
 }

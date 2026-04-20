@@ -2718,7 +2718,7 @@ def run_analysis():
     log("量化信号: {} | {}".format(qs_dir or "观望", qs.get("reason", "")[:60]))
 
     import time as _time
-    recent_losses = [s for s in memory.get("signals", [])[-3:] if s.get("pnl_points", 0) < 0]
+    recent_losses = [s for s in memory.get("signals", [])[-3:] if s.get("pnl_points", 0) < 0 and abs(s.get("pnl_points", 0)) <= 250]
     fuse_until = memory.get("fuse_until", 0)
     if fuse_until > _time.time():
         hours_left = round((fuse_until - _time.time()) / 3600, 1)

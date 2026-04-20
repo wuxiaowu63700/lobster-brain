@@ -46716,3 +46716,1041 @@ Traceback (most recent call last):
 NameError: name 'should_trade' is not defined
 /Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
   warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3420, in run_analysis
+    elif abs(score_long - score_short) < 2 and not (trend_bias):
+NameError: name 'score_long' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2767, in run_analysis
+    analysis = analyze_main(market_data, format_memory_for_claude(memory))
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 1797, in analyze_main
+    int(price), sl, TARGET_POINTS,
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2767, in run_analysis
+    analysis = analyze_main(market_data, format_memory_for_claude(memory))
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 1797, in analyze_main
+    int(price), sl, TARGET_POINTS,
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3420, in run_analysis
+    elif abs(score_long - score_short) < 2 and not (trend_bias):
+NameError: name 'score_long' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3420, in run_analysis
+    elif abs(score_long - score_short) < 2 and not (trend_bias):
+NameError: name 'score_long' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3661, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3664, in <module>
+    main()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 3645, in main
+    run_analysis()
+  File "/Users/mac/.btc_monitor/btc_brain.py", line 2804, in run_analysis
+    if not should_trade:
+NameError: name 'should_trade' is not defined
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+/Users/mac/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
